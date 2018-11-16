@@ -1,13 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web application to present the name card, and it contains the following functions:
 
-## Available Scripts
+1. Shows all 20 of the placeholder images on the screen.
 
-In the project directory, you can run:
+2. Clicking on an placeholder image opens up a modal that shows more information about 
+that picture (the number of likes, comments, user info, etc).
 
-### `npm start`
+3*. Pressing left or right arrow keys (or modal buttons) in the modal will cycle through the images.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4*. A search text field above the placeholder images that allows a user to search and filter the placeholder images by name.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+5*. A sorting dropdown menu that can sort the placeholder images by a specific criteria (name, age, likes, comments)
