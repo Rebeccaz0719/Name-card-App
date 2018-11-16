@@ -1,3 +1,9 @@
+After downloading the file and extract it, you can input the following two command in cmd to install the dependencies 
+and make the web app run on your browser. 
+1. npm install
+2. npm start
+Then you can see the app at localhost:3000 in your browser.
+
 This is a web application to present the name card, and it contains the following functions:
 
 1. Shows all 20 of the placeholder images on the screen.
