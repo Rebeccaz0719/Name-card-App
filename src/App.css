@@ -1,0 +1,109 @@
+.app-header{
+  width: 100%;
+  height: 60px;
+  background-color: #9b9b9b;
+}
+.container{
+  width: 960px;
+  margin: 100px auto;
+}
+.filter-bar{
+  padding: 0 5px;
+}
+.filter-bar .seacrh-box{
+  float: left;
+  position: relative;
+}
+.filter-bar .search{
+  display: flex;
+  align-items: center;
+}
+.filter-bar .search input{
+  padding-left: 5px;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+.filter-bar .search img{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.filter-bar .search-items{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  max-height: 300px;
+  overflow: hidden;
+  border: 1px solid #979797;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  background: #fff;
+}
+.filter-bar .search-items li{
+  list-style: none;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+}
+.filter-bar .search-items li:hover{
+  background: #9b9b9b;
+}
+.filter-bar .sort-box{
+  position: relative;
+  float: right;
+  margin-right: 200px;
+}
+.filter-bar .sort span{
+  display: block;
+  width: 150px;
+  padding-left: 5px;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #979797;
+  box-sizing: border-box;
+}
+.filter-bar .sort-items{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  overflow: hidden;
+  border: 1px solid #979797;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  background: #fff;
+}
+.filter-bar .sort-items li{
+  list-style: none;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+}
+.filter-bar .sort-items li:hover{
+  background: #9b9b9b;
+}
+
+.card-list{
+  width: 100%;
+}
+.card-list .card{
+  width: 20%;
+  float: left;
+  padding: 5px;
+  line-height: 0;
+  box-sizing: border-box;
+}
+.card-list .card img{
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.clear{
+  clear: both;
+}
