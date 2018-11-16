@@ -10,3 +10,8 @@ that picture (the number of likes, comments, user info, etc).
 4*. A search text field above the placeholder images that allows a user to search and filter the placeholder images by name.
 
 5*. A sorting dropdown menu that can sort the placeholder images by a specific criteria (name, age, likes, comments)
+
+The search bar in this web application has the predictive search function. The predictive input will be listed in the dropdown 
+when typing. The users can choose the name they want in the dropdown, by clicking it, the search result will show on the page.
+In the search result page, when users delete the content in search bar and click the 'search' font, the page will turn to the 
+original page.
