@@ -12,7 +12,7 @@ const renderTages = (d=>{
     }
 })
 
-class App extends Component {
+export default class App extends Component {
   constructor(){
       super()
       this.state = {
@@ -34,7 +34,7 @@ class App extends Component {
   loadData = ()=>{
 
       const {sortType} = this.state
-      const searchValue = this.searchInput.value
+      const searchValue = this.searchInput.value.trim()
     // The sort methods
     fetch("/mocks/data.json").then(res=>res.json()).then(data=>{
       if(searchValue){
@@ -44,7 +44,7 @@ class App extends Component {
         switch(sortType){
           case "name":
              let nameArray = []
-             data.map(d=>nameArray.push(d.user.name+"__index"+d.index))
+             data.map(d=>nameArray.push(d.user.name+"___"+d.index))
              nameArray.sort()
              data = this.nameSorted(nameArray,data)
           break;
@@ -75,9 +75,9 @@ class App extends Component {
  // The predictive search
   handelerKeyUp = (e)=>{
     if(this.searchInput){
-      let value = this.searchInput.value.trim()
+      let value = this.searchInput.value.trim() // remove the space at tne beginning and the tail of an input
       if(value){
-        let searchItems = this.state.data.filter(d=>d.user.name.includes(value))
+        let searchItems = this.state.data.filter( d => d.user.name.includes(value))
         this.setState({searchItems:searchItems,searchItemsShow:true})
       }else{
         this.setState({searchItemsShow:false})
@@ -93,7 +93,7 @@ class App extends Component {
       })
   }
 
-  // search by name
+  // search by name, once the name matches the user name, the dropdown will not appear
   handlerSearchItem = (s)=>{
      const name = s.user.name
      this.searchInput.value = name;
@@ -105,7 +105,7 @@ class App extends Component {
   // present the search page
   handlerSearch = ()=>{
       this.setState({
-          searchItemShow: false
+          searchItemsShow: false
       }, ()=>{this.loadData()})
 
   }
@@ -132,7 +132,7 @@ class App extends Component {
   nameSorted = (nameArray,data)=>{
     let newArray = [];
     for(let i=0;i<nameArray.length;i++){
-      let index = nameArray[i].split("__index")[1]
+      let index = nameArray[i].split("___")[1]
       for(let j=0;j<data.length;j++){
         if(data[j].index==index){
           newArray.push(data[j])
@@ -280,5 +280,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
